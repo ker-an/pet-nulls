@@ -12,7 +12,7 @@ variable "prefix" {
 }
 
 resource "random_pet" "this" {
-  prefix = sensitive(var.prefix)
+  prefix = var.prefix
   length = 4
 }
 
