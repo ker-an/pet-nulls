@@ -18,3 +18,7 @@ orchestrate "auto_approve" "no_pet_changes" {
     error_message = "Changes proposed to pet component."
   }
 }
+
+orchestrate "invalid" "rule" {
+  please break
+}
