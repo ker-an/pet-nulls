@@ -8,7 +8,7 @@ deployment "single" {
 deployment "many" {
   variables = {
     prefix    = "many"
-    instances = 10
+    instances = 15
   }
 }
 
