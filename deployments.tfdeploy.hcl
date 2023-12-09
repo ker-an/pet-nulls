@@ -1,7 +1,14 @@
 deployment "single" {
   variables = {
-    prefix    = "one"
+    prefix    = "single"
     instances = 1
+  }
+}
+
+deployment "two" {
+  variables = {
+    prefix    = "two"
+    instances = 2
   }
 }
 
