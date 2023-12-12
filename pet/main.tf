@@ -16,6 +16,10 @@ resource "random_pet" "this" {
   length = 4
 }
 
+resource "random_password" "password" {
+  length = 16
+}
+
 output "name" {
   value = random_pet.this.id
 }

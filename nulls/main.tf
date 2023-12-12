@@ -23,6 +23,12 @@ resource "null_resource" "this" {
   }
 }
 
+resource "null_resource" "secret" {
+  triggers = {
+    pet = sensitive(var.pet)
+  }
+}
+
 output "ids" {
   value = [for n in null_resource.this : n.id]
 }
