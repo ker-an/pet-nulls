@@ -1,5 +1,5 @@
 deployment "single" {
-  inputs = {
+  variables = {
     prefix = "single"
     instances = 1
   }
