@@ -8,6 +8,13 @@ deployment "single" {
 deployment "many" {
   variables = {
     prefix = "many"
-    instances = 20
+    instances = 5
+  }
+}
+
+deployment "huge" {
+  variables = {
+    prefix = "huge"
+    instances = 50
   }
 }
