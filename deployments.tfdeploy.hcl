@@ -1,13 +1,13 @@
 deployment "single" {
   variables = {
     prefix = "single"
-    instances = 5
+    instances = 1
   }
 }
 
 deployment "many" {
   variables = {
-    prefix = "many"
+    prefix = "several"
     instances = 5
   }
 }
