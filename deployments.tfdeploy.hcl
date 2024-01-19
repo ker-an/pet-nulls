@@ -11,10 +11,3 @@ deployment "many" {
     instances = 5
   }
 }
-
-deployment "huge" {
-  variables = {
-    prefix = "huge"
-    instances = 50
-  }
-}
