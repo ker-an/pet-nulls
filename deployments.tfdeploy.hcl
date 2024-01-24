@@ -11,10 +11,3 @@ deployment "many" {
     instances = 5
   }
 }
-
-deployment "zero" {
-  variables = {
-    prefix = "none"
-    instances = 0
-  }
-}
