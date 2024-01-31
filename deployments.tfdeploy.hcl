@@ -11,3 +11,10 @@ deployment "many" {
     instances = 5
   }
 }
+
+deployment "simple" {
+  variables = {
+    prefix = "single"
+    instances = 1
+  }
+}
