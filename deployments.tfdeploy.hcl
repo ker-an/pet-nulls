@@ -1,6 +1,6 @@
 deployment "single" {
   variables = {
-    prefix = "single"
+    prefix = "single-redo"
     instances = 1
   }
 }
