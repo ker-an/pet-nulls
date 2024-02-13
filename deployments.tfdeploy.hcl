@@ -1,6 +1,6 @@
 deployment "single" {
   variables = {
-    prefix = "shingle"
+    prefix = "single"
     instances = 1
   }
 }
