@@ -11,3 +11,9 @@ deployment "many" {
     instances = 5
   }
 }
+
+deployment "broken" {
+  variables = {
+    instances = 1
+  }
+}
