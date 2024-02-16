@@ -9,6 +9,7 @@ terraform {
 
 variable "prefix" {
   type = string
+  nullable = false
 }
 
 resource "random_pet" "this" {
