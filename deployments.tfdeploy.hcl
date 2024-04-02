@@ -1,5 +1,6 @@
-deployment "broken" {
+deployment "simple" {
   variables = {
     instances = 1
+    prefix    = "simple"
   }
 }
