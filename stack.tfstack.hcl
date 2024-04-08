@@ -1,4 +1,9 @@
 required_providers {
+  http = {
+    source  = "hashicorp/http"
+    version = "~> 3.4"
+  }
+
   null = {
     source  = "hashicorp/null"
     version = "~> 3.1"
@@ -7,6 +12,10 @@ required_providers {
   random = {
     source  = "hashicorp/random"
     version = "~> 3.3"
+  }
+
+  terraform = {
+    source = "terraform.io/builtin/terraform"
   }
 }
 
