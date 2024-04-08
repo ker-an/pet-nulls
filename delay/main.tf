@@ -34,6 +34,16 @@ resource "terraform_data" "twelve" {
   }
 }
 
+data "http" "one_twenty" {
+  url = "https://httpbin.org/delay/${local.twelve * 10}?pause=${local.six * 10}"
+}
+
+resource "terraform_data" "one_twenty" {
+  input = {
+    pause = jsondecode(data.http.one_twenty.response_body).args.pause
+  }
+}
+
 output "result" {
-  value = local.twelve
+  value = terraform_data.one_twenty.input.pause
 }
