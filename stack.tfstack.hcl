@@ -43,7 +43,7 @@ component "delay" {
 component "pet" {
   source = "./pet"
   inputs = {
-    prefix = "var.prefix-${component.delay.result}"
+    prefix = "${var.prefix}-${component.delay.result}"
   }
   providers = {
     random = provider.random.main
