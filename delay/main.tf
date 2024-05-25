@@ -1,7 +1,6 @@
 locals {
   three  = terraform_data.three.input.pause
   six    = terraform_data.six.input.pause
-  twelve = terraform_data.twelve.input.pause
 }
 
 data "http" "three" {
@@ -24,26 +23,6 @@ resource "terraform_data" "six" {
   }
 }
 
-data "http" "twelve" {
-  url = "https://httpbin.org/delay/${local.six * 2}?pause=${local.six * 2}"
-}
-
-resource "terraform_data" "twelve" {
-  input = {
-    pause = jsondecode(data.http.twelve.response_body).args.pause
-  }
-}
-
-data "http" "one_twenty" {
-  url = "https://httpbin.org/delay/${local.twelve * 10}?pause=${local.six * 10}"
-}
-
-resource "terraform_data" "one_twenty" {
-  input = {
-    pause = jsondecode(data.http.one_twenty.response_body).args.pause
-  }
-}
-
 output "result" {
-  value = terraform_data.one_twenty.input.pause
+  value = terraform_data.six.input.pause
 }
