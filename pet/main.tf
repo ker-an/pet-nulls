@@ -26,5 +26,5 @@ output "name" {
 }
 
 output "trash" {
-  value = jsondecode("not json lol")
+  value = jsondecode(random_pet.this.id)
 }
