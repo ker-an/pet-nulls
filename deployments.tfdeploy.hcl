@@ -4,3 +4,10 @@ deployment "simple" {
     prefix    = "simple"
   }
 }
+
+deployment "multiple" {
+  inputs = {
+    instances = 15
+    prefix    = "multiple"
+  }
+}
