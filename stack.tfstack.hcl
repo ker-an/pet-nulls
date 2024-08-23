@@ -21,6 +21,7 @@ required_providers {
 
 variable "prefix" {
   type = string
+  sensitive = true
 }
 
 variable "instances" {
