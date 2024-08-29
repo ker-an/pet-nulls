@@ -7,7 +7,14 @@ deployment "simple" {
 
 deployment "multiple" {
   inputs = {
-    instances = 15
+    instances = 12
     prefix    = "multiple"
+  }
+}
+
+deployment "biggest" {
+  inputs = {
+    instances = 25
+    prefix    = "big"
   }
 }
