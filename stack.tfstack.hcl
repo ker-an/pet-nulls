@@ -33,18 +33,10 @@ provider "terraform" "main" {}
 provider "null" "main" {}
 provider "random" "main" {}
 
-component "delay" {
-  source = "./delay"
-  providers = {
-    http      = provider.http.main
-    terraform = provider.terraform.main
-  }
-}
-
 component "pet" {
   source = "./pet"
   inputs = {
-    prefix = "${var.prefix}-${component.delay.result}"
+    prefix = var.prefix
   }
   providers = {
     random = provider.random.main
