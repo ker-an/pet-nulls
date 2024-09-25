@@ -53,3 +53,8 @@ component "nulls" {
     null = provider.null.main
   }
 }
+
+output "name" {
+  type = string
+  value = component.pet.name
+}
