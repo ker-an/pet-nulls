@@ -18,7 +18,7 @@ resource "random_pet" "this" {
 }
 
 resource "random_password" "password" {
-  length = 16
+  length = 15
 }
 
 output "name" {
